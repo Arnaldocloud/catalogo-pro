@@ -1,3 +1,0 @@
-echo "User-agent: *
-Allow: /
-" > robots.txt

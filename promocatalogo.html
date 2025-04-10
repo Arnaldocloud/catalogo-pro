@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo Pro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #ff7300;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    header img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1rem;
+      border: 3px solid white;
+    }
+
+    main {
+      padding: 2rem 1rem;
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: #ff7300;
+    }
+
+    .section {
+      margin-bottom: 2rem;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .option {
+      border: 2px solid #ff7300;
+      border-radius: 8px;
+      padding: 1rem;
+      transition: transform 0.2s;
+    }
+
+    .option:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .cta {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .cta a {
+      background: #ff7300;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 8px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: background-color 0.2s;
+    }
+
+    .cta a:hover {
+      background: #ff5c00;
+    }
+
+    @media (min-width: 600px) {
+      .options {
+        flex-direction: row;
+        justify-content: space-between;
+      }
+
+      .option {
+        flex: 1;
+      }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    ul li {
+      padding: 0.5rem 0;
+      margin-left: 1rem;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "•";
+      color: #ff7300;
+      font-size: 1.5em;
+      position: absolute;
+      left: -1.2em;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="image/logo.jpg" alt="Logo KamsComputers" />
+    <h1>Catálogo Pro</h1>
+    <p>La plataforma que lleva tu catálogo de productos al siguiente nivel</p>
+  </header>
+  <main>
+    <section class="section">
+      <h2>¿Qué puedes hacer con Catálogo Pro?</h2>
+      <ul>
+        <li>Calcula precios de venta al instante</li>
+        <li>Personaliza tu catálogo con tu logo y colores</li>
+        <li>Disponible 24/7 desde cualquier dispositivo</li>
+        <li>Interfaz clara, moderna y fácil de usar</li>
+        <li>Buscador inteligente con filtros avanzados</li>
+        <li>Sistema de compatibilidad de repuestos</li>
+        <li>Cotizador en línea con envío</li>
+        <li>Alertas de stock bajo o productos con poca rotación</li>
+        <li>Estadísticas de ventas</li>
+        <li>Pedidos personalizados (bajo demanda)</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Elige cómo quieres usarlo</h2>
+      <div class="options">
+        <div class="option">
+          <h3>Compra Única</h3>
+          <p>Adquiere el sistema completo y personalizable para siempre. Incluye actualizaciones de seguridad y soporte técnico por 1 año.</p>
+          <p><strong>Precio:</strong>$250 USD</p>
+        </div>
+        <div class="option">
+          <h3>Servicio mensual</h3>
+          <p>Accede a la plataforma en la nube sin necesidad de instalación.</p>
+          <p><strong>Planes desde:</strong> $15 USD/mes</p>
+        </div>
+      </div>
+    </section>
+    
+    <section class="section">
+      <h2>Opciones de Implementación</h2>
+      <div class="options">
+        <div class="option">
+          <h3>Personalizada con tu identidad corporativa</h3>
+          <p>Recibe una versión completamente personalizada con tu logo, colores corporativos y configuración específica de tu negocio.</p>
+          <p><strong>Precio:</strong> $25 USD</p>
+        </div>
+        <div class="option">
+          <h3>Implementación profesional</h3>
+          <p>Obtén tu catálogo listo para usar en tu cuenta de hosting, incluyendo configuración profesional y optimización para rendimiento.</p>
+          <p><strong>Precio:</strong> $35 USD</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="cta">
+      <h2>¿Interesado?</h2>
+      <p>Haz clic para hablar por WhatsApp y obtener una demo</p>
+      <div style="text-align: center; margin-top: 1rem;">
+        <a href="https://wa.me/584128547207" target="_blank" style="display: inline-flex; align-items: center; gap: 1rem; background: #25D366; color: white; text-decoration: none; border-radius: 8px; padding: 0.75rem 1.5rem;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2048px-WhatsApp.svg.png" alt="WhatsApp Logo" style="width: 24px; height: 24px;">
+          <span>Quiero más información</span>
+        </a>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

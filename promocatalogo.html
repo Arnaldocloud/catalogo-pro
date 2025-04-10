@@ -5,6 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Catálogo Pro</title>
+  <link rel="icon" type="image/jpg" href="image/logo.jpg">
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -12,6 +13,18 @@
       color: #333;
       margin: 0;
       padding: 0;
+    }
+
+    /* Estilo para el favicon */
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+      .favicon {
+        width: 16px;
+        height: 16px;
+        background-image: url('image/logo.jpg');
+        background-size: cover;
+        border-radius: 50%;
+        display: none;
+      }
     }
 
     header {
@@ -187,6 +200,41 @@
       </div>
     </div>
   </main>
+
+  <script>
+    // Crear favicon ovalado
+    function createFavicon() {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = 32;
+      canvas.height = 40; // Aumentamos la altura para el efecto ovalado
+
+      const img = new Image();
+      img.src = 'image/logo.jpg';
+      img.onload = () => {
+        // Dibujar elipse
+        ctx.save();
+        ctx.scale(1, 1.25); // Aumentamos la escala vertical para el efecto ovalado
+        ctx.beginPath();
+        ctx.arc(16, 16, 16, 0, 2 * Math.PI);
+        ctx.closePath();
+        ctx.restore();
+        ctx.clip();
+
+        // Dibujar imagen
+        ctx.drawImage(img, 0, 0, 32, 40);
+
+        // Crear favicon
+        const favicon = document.querySelector('link[rel="icon"]');
+        if (favicon) {
+          favicon.href = canvas.toDataURL('image/png');
+        }
+      };
+    }
+
+    // Ejecutar cuando la página cargue
+    window.addEventListener('load', createFavicon);
+  </script>
 </body>
 
 </html>

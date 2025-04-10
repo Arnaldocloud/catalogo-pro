@@ -1,0 +1,10 @@
+echo "/* Team */
+Arnaldo Cloud - Developer
+
+/* Thanks to */
+Vercel - Hosting
+GitHub - Repository
+
+/* Site */
+Last update: 2025-04-10
+" > humans.txt
